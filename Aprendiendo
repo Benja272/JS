@@ -1,0 +1,66 @@
+// Template literals o String template
+/*
+const pizza = 'Pizza',precio1 = 10,hamburgueza = 'hamburgueza ',precio2 = 20
+let html
+ Forma tradicional 
+html = '<ul>' +
+        '<li>Orden: '+pizza+ '</li>'+
+        '<li>precio: '+precio1 + '</li>'+ 
+        '<li>Orden: '+hamburgueza+ '</li>'+
+        '<li>precio: '+precio2 + '</li>' +
+        '<li>total: '+(precio1+precio2)+  '</li>'+
+        '</ul>' 
+        
+//Forma Nueva       
+html =` 
+    <ul>
+        <li>Orden: ${pizza}</li>
+        <li>Precio: ${precio1}</li>
+        <li>Orden: ${hamburgueza}</li>
+        <li>Precio: ${precio2}</li>
+        <li>Total: ${precio2 + precio1}</li>
+    </ul>
+    `
+document.getElementById('app').innerHTML = html
+
+let array = [1,2,3,45,6,8],
+    array1 = [3,1,90]
+let con = array.concat(array1)
+console.log(con)
+
+array = ['hola','pero','otra','todo']
+console.log(array.sort) //Para ordenar Strings
+//Para ordenar de menor a mayor,solo cambiando de lugar las variables ,oredena de mayor a menor
+con.sort(function(x,y){
+    return x-y;
+})
+console.log(con)
+
+//Crear objeto
+
+const persona = {
+    nombre: 'Migel'
+    ,apellido: 'Martinez'
+    ,edad: 20
+    ,profecion: 'Doctor'
+    ,hogar: {
+        ciudad: 'Cordoba'
+        ,direccion: 'av Colon'
+    }
+    ,nacimiento: function(){
+        return new Date().getFullYear() - this.edad
+    }
+}
+console.log(persona)
+console.log(persona['nombre'])
+console.log(persona.nombre)//Distinta forma de hacer lo mismo
+console.log(persona.nacimiento())
+
+//Arreglo de objetos
+const autos = [
+    {motor: 'chebrolet' , motor : '6.0'},
+    {motor: 'fiat' , motor : '6.1'},
+    {motor: 'ford' , motor : '6.4'}
+]
+console.log(autos)
+*/
