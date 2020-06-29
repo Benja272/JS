@@ -56,6 +56,7 @@ console.log(persona['nombre'])
 console.log(persona.nombre)//Distinta forma de hacer lo mismo
 console.log(persona.nacimiento())
 
+
 //Arreglo de objetos
 const autos = [
     {motor: 'chebrolet' , motor : '6.0'},
@@ -63,4 +64,68 @@ const autos = [
     {motor: 'ford' , motor : '6.4'}
 ]
 console.log(autos)
+
+//Function declaration (Con valor por default)
+function saludar(nombre = 'visitante'){
+    console.log(`hola ${nombre}`)
+}
+console.log(saludar('perro'));
+//IIFE
+
+(function (tecnologia) {
+    console.log(`Creando un IIFE con ${tecnologia}`)
+})('JS');
+
+//Metodos de propiedad
+const musica = {
+    reproducir: function(){
+        console.log('Reproduciendo')
+    }
+}
+musica.reproducir()
+
+//Funcion que no existe
+try{
+    algo();
+}catch(error){
+    console.log(error);
+}finally{
+    console.log('Siempre se ejecuta esta parte')
+}
+
+function obtenerClientes(){
+    console.log('Descargando');
+    setTimeout(function(){
+        console.log('Completo')
+    },3000); //3 segundos
+}
+obtenerClientes()
+
+//Fechas en JS (resumido)
+const diaHoy = new Date();
+// Fecha en especifico Mes,Dia y Año
+let navidad2017 = new Date('12-25-2017');
+console.log(navidad2017);
+let valor;
+//mes
+valor = diaHoy.getMonth(); //Devuelve el numero del mes -1
+//Dia
+valor  = diaHoy.getDate();
+//Devuelve el dia de la semana de la fecha, Ej: domingo = 0
+valor = diaHoy.getDay();
+//Año
+valor = diaHoy.getFullYear();
+//Minutos
+valor = diaHoy.getMinutes();
+//Milisegundos desde 1970
+valor = diaHoy.getTime()
+//Modificar el año
+diaHoy.setFullYear(1980);
+valor = diaHoy.getFullYear();
+console.log(valor)
+
+//if else en una linea
+
+let loggeado = true;
+console.log(loggeado ? 'Se loggeo' : 'no se loggeo');
 */
