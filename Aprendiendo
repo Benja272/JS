@@ -128,4 +128,92 @@ console.log(valor)
 
 let loggeado = true;
 console.log(loggeado ? 'Se loggeo' : 'no se loggeo');
+
+//Switch en JS
+const key = 1;
+switch (key) {
+    case 1:
+        console.log('Caso 1');
+        break;
+    case 2:
+        console.log('Caso2'); 
+    default:
+        console.log('Caso default')
+        break;
+}
+
+//forEach
+const array = ['Hola','Me','Llamo','Benja'];
+array.forEach(function(i,index){ //Por default index reprecenta el lugar donde se encuentra i en el arreglo.
+    console.log(`elemento: ${i} ${index}`); //La variable i sera alguno de los elementos del arreglo.
+});
+//Map para recorrer un arreglo de objetos
+//Devuelve un array con el resultado de evaluar la funcion en cada elemento del arreglo.
+let carrito = [
+    {id : 0,producto : 'perro'},
+    {id : 1,producto : 'gato'},
+    {id : 2,producto : 'loro'},
+    {id : 3,producto : 'iman'},
+];
+
+const nombreProducto = carrito.map(function(carrito){
+    return carrito.producto;
+});
+
+console.log(nombreProducto);
+//Otra forma seria 
+carrito = ['Hola','Perro','Gato'] ;
+for(let i in carrito){
+    console.log(carrito[i]);
+}
+//Entries Iterador
+let carrito = [
+    {id : 0,producto : 'perro'},
+    {id : 1,producto : 'gato'},
+    {id : 2,producto : 'loro'},
+    {id : 3,producto : 'iman'},
+];
+//entries devuelve cada elemento del arreglo como una dupla con su indexacion
+//sin entries devuelve cada elemento del arreglo
+for(let i of carrito.entries()){
+    console.log(i);
+}
+//values para acceder directamente a los valores sin la parte de index
+for(let i of carrito.values()){
+    console.log(i);
+}
+//itera desde 0 hasta carrito.length
+for(let i of carrito.keys()){
+    console.log(i);
+}
+const mensaje = 'Buenos dias miame';
+for(let letra of mensaje){
+    console.log(letra);
+} 
+
+const enlaces = document.getElementsByTagName('a');
+for(let enlace of enlaces){
+    console.log(enlace.href);
+}
+//Propiedades del window object
+let altura,anchura;
+altura = window.outerHeight;//Altura total del navegador
+anchura = window.outerWidth;//Anchura total del navegador
+altura = window.innerHeight;//Sin incluir la consola y demas componentes
+anchura = window.innerWidth;
+
+console.log(altura);
+console.log(anchura);
+
+let ubicacion;//INFORMACION interesante.
+ubicacion = window.location;
+
+//Redireccionar al usuario
+
+// window.location.href = 'http://twitter.com';
+//Mas informacion relacionada al navegador.
+ubicacion = window.navigator;
+//Saber el lenguaje del usuario
+ubicacion = window.navigator.language;
+console.log(ubicacion);
 */
